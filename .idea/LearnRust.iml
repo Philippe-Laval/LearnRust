@@ -5,9 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/get-dependencies/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/guessing_game/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/hello_cargo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/variables/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/get-dependencies/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_cargo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/variables/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

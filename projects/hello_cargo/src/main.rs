@@ -3,6 +3,7 @@
 // ./target/debug/hello_cargo
 // .\target\debug\hello_cargo.exe
 // cargo run
+// cargo run --release
 // cargo check
 // cargo build --release
 

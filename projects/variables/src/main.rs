@@ -5,6 +5,7 @@ fn main() {
     println!("The value of x is: {x}");
 
     const THREE_HOURS_IN_SECONDS: u32 = 3 * 60 * 60;
+    println!("The value of THREE_HOURS_IN_SECONDS: {THREE_HOURS_IN_SECONDS}");
 
     // shadowing
 
@@ -93,4 +94,59 @@ fn main() {
 
     let first = a[0];
     let second = a[1];
+    println!("The value of first is: {first}");
+    println!("The value of second is: {second}");
+
+    another_function();
+    another_function2(5);
+    print_labeled_measurement(5, 'h');
+
+    test_control_flow();
+}
+
+fn another_function() {
+    println!("Another function.");
+}
+
+fn another_function2(x: i32) {
+    println!("The value of x is: {x}");
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+
+    let y = {
+        let x = 3;
+        // Note the x + 1 line without a semicolon at the end
+        x + 1
+    };
+
+    println!("The value of y is: {y}");
+
+    let x = five();
+    println!("The value of x is: {x}");
+
+    let x = plus_one(5);
+    println!("The value of x is: {x}");
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn test_control_flow()
+{
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
+
+
 }

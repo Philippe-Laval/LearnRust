@@ -1,3 +1,6 @@
+use crate::flow::test_control_flow;
+mod flow;
+
 fn main() {
     let mut x = 5;
     println!("The value of x is: {x}");
@@ -138,15 +141,3 @@ fn plus_one(x: i32) -> i32 {
     x + 1
 }
 
-fn test_control_flow()
-{
-    let number = 3;
-
-    if number < 5 {
-        println!("condition was true");
-    } else {
-        println!("condition was false");
-    }
-
-
-}

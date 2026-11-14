@@ -8,6 +8,11 @@
 // cargo build --release
 
 // cargo new hello_struct
+// cd /Users/philippe/RustroverProjects/LearnRust/projects
+// cargo new hello_enum
+// cd hello_enum
+// cargo build
+// cargo run
 
 fn main() {
     println!("Hello, world!");

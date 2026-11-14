@@ -2,6 +2,31 @@ fn main() {
 
     test1();
     test2();
+    test3();
+}
+
+fn test3()
+{
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
+    };
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    let sq = Rectangle::square(3);
+    println!("Square: {:#?}", sq);
+
+    
 }
 
 fn test2()
@@ -41,6 +66,13 @@ fn test2()
         rect1.area()
     );
 
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
+
+    if rect1.height() {
+        println!("The rectangle has a nonzero height; it is {}", rect1.height);
+    }
 
 }
 
@@ -51,8 +83,28 @@ struct Rectangle {
 }
 
 impl Rectangle {
+
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+
     fn area(&self) -> u32 {
         self.width * self.height
+    }
+
+    fn height(&self) -> bool {
+        self.height > 0
+    }
+
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
     }
 }
 

@@ -8,12 +8,14 @@
       <sourceFolder url="file://$MODULE_DIR$/projects/variables/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/hello_ownership/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/projects/hello_struct/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/hello_enum/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/get-dependencies/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/guessing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_cargo/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_ownership/target" />
       <excludeFolder url="file://$MODULE_DIR$/projects/hello_struct/target" />
+      <excludeFolder url="file://$MODULE_DIR$/projects/hello_enum/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

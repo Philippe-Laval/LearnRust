@@ -7,6 +7,8 @@
 // cargo check
 // cargo build --release
 
+// cargo new hello_struct
+
 fn main() {
     println!("Hello, world!");
 }

@@ -71,18 +71,44 @@ fn main() {
         println!("The maximum is configured to be {max}");
     }
 
+
+    let coin = Coin2::Quarter(UsState::Alaska);
+
+    if let Some(description) = describe_state_quarter(coin) {
+        println!("{description}");
+    }
+
+    let coin = Coin2::Quarter(UsState::Alaska);
+    
+    let mut state1 : UsState;
     let mut count = 0;
     match coin {
-        Coin::Quarter(state) => println!("State quarter from {state:?}!"),
+        Coin2::Quarter(state1) => println!("State quarter from {state1:?}!"),
         _ => count += 1,
     }
 
-    let mut count = 0;
-    if let Coin::Quarter(state) = coin {
-        println!("State quarter from {state:?}!");
+    
+    println!("count {:?}", count);
+
+    let mut state2 : UsState;
+
+    let coin2 = Coin2::Quarter(UsState::Alabama);
+
+    if let Some(description) = describe_state_quarter(coin2) {
+        println!("{description}");
+    }
+
+    let coin2 = Coin2::Quarter(UsState::Alabama);
+
+    if let Coin2::Quarter(state2) = coin2 {
+        println!("State quarter from {state2:?}!");
     } else {
         count += 1;
     }
+
+
+    println!("count {:?}", count);
+
 
 }
 
@@ -164,6 +190,28 @@ enum UsState {
     Alabama,
     Alaska,
     // --snip--
+}
+
+impl UsState {
+    fn existed_in(&self, year: u16) -> bool {
+        match self {
+            UsState::Alabama => year >= 1819,
+            UsState::Alaska => year >= 1959,
+            // -- snip --
+        }
+    }
+}
+
+fn describe_state_quarter(coin: Coin2) -> Option<String> {
+    if let Coin2::Quarter(state) = coin {
+        if state.existed_in(1900) {
+            Some(format!("{state:?} is pretty old, for America!"))
+        } else {
+            Some(format!("{state:?} is relatively new."))
+        }
+    } else {
+        None
+    }
 }
 
 #[derive(Debug)] 

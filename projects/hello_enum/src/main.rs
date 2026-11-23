@@ -39,8 +39,13 @@ fn main() {
 
     value_in_cents2(Coin2::Quarter(UsState::Alaska));
 
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
 
-
+    println!("five {:?}", five);
+    println!("six {:?}", six);
+    println!("none {:?}", none);
 }
 
 #[derive(Debug)]
@@ -123,6 +128,7 @@ enum UsState {
     // --snip--
 }
 
+#[derive(Debug)] 
 enum Coin2 {
     Penny,
     Nickel,
@@ -148,3 +154,4 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
         Some(i) => Some(i + 1),
     }
 }
+
